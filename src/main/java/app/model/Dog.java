@@ -4,13 +4,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("timer")
-public class Timer {
-
-    private final Long nanoTime = System.nanoTime();
-
-    public Long getTime() {
-        return nanoTime;
+@Qualifier("dog")
+public class Dog extends Animal{
+    @Override
+    public String toString() {
+        return "Im a Dog";
     }
-
 }
